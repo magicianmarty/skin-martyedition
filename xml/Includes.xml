@@ -341,7 +341,7 @@
 				<width>$PARAM[strip_width]</width>
 				<height>26</height>
 				<texture>colors/black.png</texture>
-				<colordiffuse>99FFFFFF</colordiffuse>
+				<colordiffuse>88FFFFFF</colordiffuse>
 				<visible>!String.IsEmpty(ListItem.Property(badge_line))</visible>
 			</control>
 			<control type="label">
@@ -362,7 +362,7 @@
 				<width>$PARAM[strip_width]</width>
 				<height>26</height>
 				<texture>colors/black.png</texture>
-				<colordiffuse>99FFFFFF</colordiffuse>
+				<colordiffuse>88FFFFFF</colordiffuse>
 				<visible>!String.IsEmpty(ListItem.Duration)</visible>
 			</control>
 			<control type="label">

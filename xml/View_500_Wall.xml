@@ -217,12 +217,22 @@
 	<include name="MartyHomeTile">
 		<param name="focused">false</param>
 		<definition>
+			<!-- Focused tiles lift: a shadow under every tile would just be
+			     noise across a whole row, so only the focused one gets one. -->
+			<control type="image">
+				<left>-8</left>
+				<top>-8</top>
+				<width>340</width>
+				<height>198</height>
+				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<visible>$PARAM[focused]</visible>
+			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>324</width>
 				<height>182</height>
-				<texture colordiffuse="button_focus">colors/grey.png</texture>
+				<texture colordiffuse="button_focus">colors/white.png</texture>
 				<visible>$PARAM[focused]</visible>
 			</control>
 			<control type="image">
@@ -263,10 +273,10 @@
 			</control>
 			<control type="label">
 				<left>4</left>
-				<top>188</top>
+				<top>186</top>
 				<width>316</width>
-				<height>22</height>
-				<font>font12</font>
+				<height>26</height>
+				<font>font13</font>
 				<align>left</align>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -275,10 +285,10 @@
 			</control>
 			<control type="label">
 				<left>4</left>
-				<top>210</top>
+				<top>214</top>
 				<width>316</width>
-				<height>22</height>
-				<font>font10</font>
+				<height>24</height>
+				<font>font12</font>
 				<align>left</align>
 				<textcolor>grey</textcolor>
 				<label>$INFO[ListItem.Artist]</label>
