@@ -315,7 +315,7 @@
 				<height>6</height>
 				<texture>colors/black.png</texture>
 				<colordiffuse>AAFFFFFF</colordiffuse>
-				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
+				<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 			</control>
 			<control type="progress">
 				<left>0</left>
@@ -323,7 +323,7 @@
 				<width>$PARAM[pw]</width>
 				<height>6</height>
 				<info>ListItem.PercentPlayed</info>
-				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
+				<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 			</control>
 		</definition>
 	</include>
@@ -375,7 +375,7 @@
 				<height>6</height>
 				<texture>colors/black.png</texture>
 				<colordiffuse>AAFFFFFF</colordiffuse>
-				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
+				<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 			</control>
 			<control type="progress">
 				<left>4</left>
@@ -383,7 +383,7 @@
 				<width>316</width>
 				<height>6</height>
 				<info>ListItem.PercentPlayed</info>
-				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
+				<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 			</control>
 			<control type="label">
 				<left>4</left>
