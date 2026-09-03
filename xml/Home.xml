@@ -168,7 +168,7 @@
 				<onleft>9004</onleft>
 				<onright>9006</onright>
 				<ondown>9101</ondown>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/kodion/search/list/&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/search&quot;,return)</onclick>
 			</control>
 			<control type="button" id="9006">
 				<width>auto</width>

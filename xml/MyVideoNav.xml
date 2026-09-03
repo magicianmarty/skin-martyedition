@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">50</defaultcontrol>
+	<defaultcontrol always="true">500</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-	<views>504,50,51,52,53,54,55,500,501,502</views>
+	<views>500,504,50,51,52,53,54,55,501,502</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
+		<control type="image">
+			<left>0</left><top>0</top><width>1920</width><height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+		</control>
+		<control type="image">
+			<left>0</left><top>0</top><width>1920</width><height>1080</height>
+			<texture>colors/black.png</texture>
+			<colordiffuse>C8FFFFFF</colordiffuse>
+		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>View_50_List</include>
@@ -79,9 +90,24 @@
 					</control>
 				</control>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
-			</include>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<control type="label">
+					<left>60</left><top>40</top><width>500</width><height>56</height>
+					<font>font36_title</font><textcolor>white</textcolor>
+					<label>marty[COLOR ffe5a00d]edition[/COLOR]</label>
+				</control>
+				<control type="label">
+					<left>560</left><top>40</top><width>900</width><height>56</height>
+					<font>font27</font><aligny>center</aligny><textcolor>grey</textcolor>
+					<label>$INFO[Container.FolderName]$INFO[Container.NumItems,     ,  items]</label>
+				</control>
+				<control type="label">
+					<right>60</right><top>40</top><width>300</width><height>56</height>
+					<font>font27</font><align>right</align><aligny>center</aligny><textcolor>grey</textcolor>
+					<label>$INFO[System.Time]</label>
+				</control>
+			</control>
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
