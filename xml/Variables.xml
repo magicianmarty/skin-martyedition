@@ -2563,4 +2563,11 @@
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value>$INFO[ListItem.Art(landscape)]</value>
 	</variable>
+	<!-- Container.NumItems counts the page and the Search and Next rows the
+	     add-on puts in it, so a 1368-title library reported 102. Where the
+	     add-on publishes a real total, use that. -->
+	<variable name="MartyBrowseCount">
+		<value condition="!String.IsEmpty(Container.Property(total_label))">$INFO[Container.Property(total_label)]</value>
+		<value>$INFO[Container.NumItems,,  items]</value>
+	</variable>
 </includes>

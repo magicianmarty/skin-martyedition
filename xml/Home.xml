@@ -2,6 +2,10 @@
 <window>
 	<defaultcontrol always="true">9101</defaultcontrol>
 	<backgroundcolor>black</backgroundcolor>
+	<!-- The row list keeps where it was left, so returning from a lower
+	     row reopened the screen part-way down with that row at the top.
+	     Home starts at the top. -->
+	<onload>SetFocus(9101)</onload>
 	<controls>
 		<!-- Hero artwork. A skin cannot ask for "the focused container", only
 		     for a named one, so this is one image per row with a visibility
