@@ -208,4 +208,47 @@
 		</definition>
 	</include>
 
+	<include name="MartyHomeTile">
+		<param name="focused">false</param>
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>324</width>
+				<height>182</height>
+				<texture colordiffuse="button_focus">colors/grey.png</texture>
+				<visible>$PARAM[focused]</visible>
+			</control>
+			<control type="image">
+				<left>4</left>
+				<top>4</top>
+				<width>316</width>
+				<height>174</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+			</control>
+			<control type="label">
+				<left>4</left>
+				<top>188</top>
+				<width>316</width>
+				<height>22</height>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>4</left>
+				<top>210</top>
+				<width>316</width>
+				<height>22</height>
+				<font>font10</font>
+				<align>left</align>
+				<textcolor>grey</textcolor>
+				<label>$INFO[ListItem.Artist]</label>
+				<visible>!String.IsEmpty(ListItem.Artist)</visible>
+			</control>
+		</definition>
+	</include>
+
 </includes>
