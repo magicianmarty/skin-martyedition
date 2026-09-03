@@ -13,6 +13,7 @@
 				<width>98%</width>
 				<height>950</height>
 				<onleft>9000</onleft>
+				<onright condition="!String.IsEmpty(Container.Property(letter_base))">9200</onright>
 				<onright>531</onright>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">500</onup>
 				<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>

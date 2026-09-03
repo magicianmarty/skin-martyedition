@@ -117,7 +117,7 @@
 				<onleft>9001</onleft>
 				<onright>9003</onright>
 				<ondown>9101</ondown>
-				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/hubs?hub=%2Fhubs%2Fhome%2FrecentlyAdded%3Ftype%3D1&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/library?type=movie&quot;,return)</onclick>
 			</control>
 			<control type="button" id="9003">
 				<width>auto</width>
@@ -134,7 +134,7 @@
 				<onleft>9002</onleft>
 				<onright>9004</onright>
 				<ondown>9101</ondown>
-				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/hubs?hub=%2Fhubs%2Fhome%2FrecentlyAdded%3Ftype%3D2&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/library?type=show&quot;,return)</onclick>
 			</control>
 			<control type="button" id="9004">
 				<width>auto</width>

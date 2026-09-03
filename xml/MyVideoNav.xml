@@ -119,6 +119,497 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<include condition="!Skin.HasSetting(hide_mediaflags)">MediaFlags</include>
 			</control>
+			<!-- The alphabet down the side, as the Plex app has. The path it
+			     jumps to is published by the add-on as a container property:
+			     library section numbers are per server, and which letters
+			     exist differs per library, so the skin cannot build it. -->
+			<control type="group">
+				<visible>!String.IsEmpty(Container.Property(letter_base))</visible>
+				<right>8</right>
+				<top>120</top>
+				<width>44</width>
+				<height>950</height>
+				<control type="grouplist" id="9200">
+					<width>44</width>
+					<height>950</height>
+					<orientation>vertical</orientation>
+					<itemgap>0</itemgap>
+					<control type="button" id="9199">
+						<width>44</width>
+						<height>34</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>All</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>Container.Update($INFO[Container.Property(letter_all)])</onclick>
+					</control>
+				<control type="button" id="9200">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>#</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9226</onup>
+					<ondown>9201</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]%23)</onclick>
+				</control>
+				<control type="button" id="9201">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>A</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9200</onup>
+					<ondown>9202</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]A)</onclick>
+				</control>
+				<control type="button" id="9202">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>B</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9201</onup>
+					<ondown>9203</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]B)</onclick>
+				</control>
+				<control type="button" id="9203">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>C</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9202</onup>
+					<ondown>9204</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]C)</onclick>
+				</control>
+				<control type="button" id="9204">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>D</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9203</onup>
+					<ondown>9205</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]D)</onclick>
+				</control>
+				<control type="button" id="9205">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>E</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9204</onup>
+					<ondown>9206</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]E)</onclick>
+				</control>
+				<control type="button" id="9206">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>F</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9205</onup>
+					<ondown>9207</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]F)</onclick>
+				</control>
+				<control type="button" id="9207">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>G</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9206</onup>
+					<ondown>9208</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]G)</onclick>
+				</control>
+				<control type="button" id="9208">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>H</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9207</onup>
+					<ondown>9209</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]H)</onclick>
+				</control>
+				<control type="button" id="9209">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>I</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9208</onup>
+					<ondown>9210</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]I)</onclick>
+				</control>
+				<control type="button" id="9210">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>J</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9209</onup>
+					<ondown>9211</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]J)</onclick>
+				</control>
+				<control type="button" id="9211">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>K</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9210</onup>
+					<ondown>9212</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]K)</onclick>
+				</control>
+				<control type="button" id="9212">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>L</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9211</onup>
+					<ondown>9213</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]L)</onclick>
+				</control>
+				<control type="button" id="9213">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>M</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9212</onup>
+					<ondown>9214</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]M)</onclick>
+				</control>
+				<control type="button" id="9214">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>N</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9213</onup>
+					<ondown>9215</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]N)</onclick>
+				</control>
+				<control type="button" id="9215">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>O</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9214</onup>
+					<ondown>9216</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]O)</onclick>
+				</control>
+				<control type="button" id="9216">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>P</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9215</onup>
+					<ondown>9217</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]P)</onclick>
+				</control>
+				<control type="button" id="9217">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>Q</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9216</onup>
+					<ondown>9218</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]Q)</onclick>
+				</control>
+				<control type="button" id="9218">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>R</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9217</onup>
+					<ondown>9219</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]R)</onclick>
+				</control>
+				<control type="button" id="9219">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>S</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9218</onup>
+					<ondown>9220</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]S)</onclick>
+				</control>
+				<control type="button" id="9220">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>T</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9219</onup>
+					<ondown>9221</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]T)</onclick>
+				</control>
+				<control type="button" id="9221">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>U</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9220</onup>
+					<ondown>9222</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]U)</onclick>
+				</control>
+				<control type="button" id="9222">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>V</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9221</onup>
+					<ondown>9223</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]V)</onclick>
+				</control>
+				<control type="button" id="9223">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>W</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9222</onup>
+					<ondown>9224</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]W)</onclick>
+				</control>
+				<control type="button" id="9224">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>X</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9223</onup>
+					<ondown>9225</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]X)</onclick>
+				</control>
+				<control type="button" id="9225">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>Y</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9224</onup>
+					<ondown>9226</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]Y)</onclick>
+				</control>
+				<control type="button" id="9226">
+					<width>44</width>
+					<height>34</height>
+					<font>font10</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<label>Z</label>
+					<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<onup>9225</onup>
+					<ondown>9200</ondown>
+					<onclick>Container.Update($INFO[Container.Property(letter_base)]Z)</onclick>
+				</control>
+				</control>
+			</control>
 			<include>CommonScrollbars</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
