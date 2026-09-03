@@ -13,7 +13,7 @@
 				<width>98%</width>
 				<height>950</height>
 				<onleft>9000</onleft>
-				<onright condition="!String.IsEmpty(Container.Property(letter_base))">9200</onright>
+				<onright condition="!String.IsEmpty(Container.Property(alphabet))">9200</onright>
 				<onright>531</onright>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">500</onup>
 				<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
@@ -323,6 +323,11 @@
 				<width>$PARAM[pw]</width>
 				<height>6</height>
 				<info>ListItem.PercentPlayed</info>
+				<texturebg colordiffuse="CC000000">colors/white.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<midtexture colordiffuse="ffe5a00d">colors/white.png</midtexture>
 				<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 			</control>
 		</definition>
@@ -383,6 +388,11 @@
 				<width>316</width>
 				<height>6</height>
 				<info>ListItem.PercentPlayed</info>
+				<texturebg colordiffuse="CC000000">colors/white.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<midtexture colordiffuse="ffe5a00d">colors/white.png</midtexture>
 				<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 			</control>
 			<control type="label">

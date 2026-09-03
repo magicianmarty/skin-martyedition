@@ -119,16 +119,17 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<include condition="!Skin.HasSetting(hide_mediaflags)">MediaFlags</include>
 			</control>
-			<!-- The alphabet down the side, as the Plex app has. The path it
-			     jumps to is published by the add-on as a container property:
-			     library section numbers are per server, and which letters
-			     exist differs per library, so the skin cannot build it.
+			<!-- The alphabet down the side, as the Plex app has. It jumps to
+			     where a letter starts in the full listing rather than
+			     filtering to it: filtering meant picking Z left you in a
+			     listing that contained only Z and nothing to scroll on into.
 
-			     Vertical movement is left to the grouplist. Wiring each button
-			     to the next by hand is how the ids ended up colliding with the
-			     list's own. -->
+			     The add-on publishes each letter's position, because it is the
+			     only side that knows the sort order Plex used - "The Princess
+			     Bride" files under P - and which letters the library actually
+			     has. Letters it has none of do not draw. -->
 			<control type="group">
-				<visible>!String.IsEmpty(Container.Property(letter_base))</visible>
+				<visible>!String.IsEmpty(Container.Property(alphabet))</visible>
 				<right>8</right>
 				<top>118</top>
 				<width>44</width>
@@ -153,7 +154,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_all)])</onclick>
+						<onclick>SetFocus(500,0)</onclick>
+						<visible>true</visible>
 					</control>
 					<control type="button" id="9210">
 						<width>44</width>
@@ -168,7 +170,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]%23)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_#)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_#))</visible>
 					</control>
 					<control type="button" id="9211">
 						<width>44</width>
@@ -183,7 +186,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]A)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_A)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_A))</visible>
 					</control>
 					<control type="button" id="9212">
 						<width>44</width>
@@ -198,7 +202,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]B)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_B)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_B))</visible>
 					</control>
 					<control type="button" id="9213">
 						<width>44</width>
@@ -213,7 +218,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]C)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_C)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_C))</visible>
 					</control>
 					<control type="button" id="9214">
 						<width>44</width>
@@ -228,7 +234,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]D)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_D)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_D))</visible>
 					</control>
 					<control type="button" id="9215">
 						<width>44</width>
@@ -243,7 +250,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]E)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_E)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_E))</visible>
 					</control>
 					<control type="button" id="9216">
 						<width>44</width>
@@ -258,7 +266,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]F)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_F)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_F))</visible>
 					</control>
 					<control type="button" id="9217">
 						<width>44</width>
@@ -273,7 +282,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]G)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_G)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_G))</visible>
 					</control>
 					<control type="button" id="9218">
 						<width>44</width>
@@ -288,7 +298,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]H)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_H)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_H))</visible>
 					</control>
 					<control type="button" id="9219">
 						<width>44</width>
@@ -303,7 +314,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]I)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_I)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_I))</visible>
 					</control>
 					<control type="button" id="9220">
 						<width>44</width>
@@ -318,7 +330,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]J)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_J)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_J))</visible>
 					</control>
 					<control type="button" id="9221">
 						<width>44</width>
@@ -333,7 +346,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]K)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_K)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_K))</visible>
 					</control>
 					<control type="button" id="9222">
 						<width>44</width>
@@ -348,7 +362,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]L)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_L)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_L))</visible>
 					</control>
 					<control type="button" id="9223">
 						<width>44</width>
@@ -363,7 +378,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]M)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_M)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_M))</visible>
 					</control>
 					<control type="button" id="9224">
 						<width>44</width>
@@ -378,7 +394,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]N)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_N)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_N))</visible>
 					</control>
 					<control type="button" id="9225">
 						<width>44</width>
@@ -393,7 +410,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]O)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_O)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_O))</visible>
 					</control>
 					<control type="button" id="9226">
 						<width>44</width>
@@ -408,7 +426,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]P)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_P)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_P))</visible>
 					</control>
 					<control type="button" id="9227">
 						<width>44</width>
@@ -423,7 +442,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]Q)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Q)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_Q))</visible>
 					</control>
 					<control type="button" id="9228">
 						<width>44</width>
@@ -438,7 +458,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]R)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_R)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_R))</visible>
 					</control>
 					<control type="button" id="9229">
 						<width>44</width>
@@ -453,7 +474,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]S)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_S)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_S))</visible>
 					</control>
 					<control type="button" id="9230">
 						<width>44</width>
@@ -468,7 +490,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]T)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_T)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_T))</visible>
 					</control>
 					<control type="button" id="9231">
 						<width>44</width>
@@ -483,7 +506,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]U)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_U)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_U))</visible>
 					</control>
 					<control type="button" id="9232">
 						<width>44</width>
@@ -498,7 +522,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]V)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_V)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_V))</visible>
 					</control>
 					<control type="button" id="9233">
 						<width>44</width>
@@ -513,7 +538,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]W)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_W)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_W))</visible>
 					</control>
 					<control type="button" id="9234">
 						<width>44</width>
@@ -528,7 +554,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]X)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_X)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_X))</visible>
 					</control>
 					<control type="button" id="9235">
 						<width>44</width>
@@ -543,7 +570,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]Y)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Y)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_Y))</visible>
 					</control>
 					<control type="button" id="9236">
 						<width>44</width>
@@ -558,7 +586,8 @@
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
 						<onright>500</onright>
-						<onclick>Container.Update($INFO[Container.Property(letter_base)]Z)</onclick>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Z)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_Z))</visible>
 					</control>
 				</control>
 			</control>
