@@ -181,15 +181,15 @@
 			<orientation>vertical</orientation>
 			<scrolltime tween="cubic" easing="out">400</scrolltime>
 			<control type="group">
-				<height>306</height>
+				<height>314</height>
 				<!-- The active row's heading is lit and the rest are dimmed, so
 				     the eye finds the current row without hunting for the
 				     highlighted tile. Two labels because textcolor is static. -->
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>white</textcolor>
 					<label>Continue Watching</label>
 					<visible>Control.HasFocus(9101)</visible>
@@ -197,15 +197,15 @@
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>grey</textcolor>
 					<label>Continue Watching</label>
 					<visible>!Control.HasFocus(9101)</visible>
 				</control>
 				<control type="list" id="9101">
 					<left>60</left>
-					<top>48</top>
+					<top>56</top>
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
@@ -232,15 +232,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>306</height>
+				<height>314</height>
 				<!-- The active row's heading is lit and the rest are dimmed, so
 				     the eye finds the current row without hunting for the
 				     highlighted tile. Two labels because textcolor is static. -->
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>white</textcolor>
 					<label>Continue on YouTube</label>
 					<visible>Control.HasFocus(9102)</visible>
@@ -248,15 +248,15 @@
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>grey</textcolor>
 					<label>Continue on YouTube</label>
 					<visible>!Control.HasFocus(9102)</visible>
 				</control>
 				<control type="list" id="9102">
 					<left>60</left>
-					<top>48</top>
+					<top>56</top>
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
@@ -283,15 +283,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>306</height>
+				<height>314</height>
 				<!-- The active row's heading is lit and the rest are dimmed, so
 				     the eye finds the current row without hunting for the
 				     highlighted tile. Two labels because textcolor is static. -->
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>white</textcolor>
 					<label>Recently Added Movies</label>
 					<visible>Control.HasFocus(9103)</visible>
@@ -299,15 +299,15 @@
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>grey</textcolor>
 					<label>Recently Added Movies</label>
 					<visible>!Control.HasFocus(9103)</visible>
 				</control>
 				<control type="list" id="9103">
 					<left>60</left>
-					<top>48</top>
+					<top>56</top>
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
@@ -334,15 +334,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>306</height>
+				<height>314</height>
 				<!-- The active row's heading is lit and the rest are dimmed, so
 				     the eye finds the current row without hunting for the
 				     highlighted tile. Two labels because textcolor is static. -->
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>white</textcolor>
 					<label>Recently Added TV</label>
 					<visible>Control.HasFocus(9104)</visible>
@@ -350,15 +350,15 @@
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>grey</textcolor>
 					<label>Recently Added TV</label>
 					<visible>!Control.HasFocus(9104)</visible>
 				</control>
 				<control type="list" id="9104">
 					<left>60</left>
-					<top>48</top>
+					<top>56</top>
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
@@ -385,15 +385,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>306</height>
+				<height>314</height>
 				<!-- The active row's heading is lit and the rest are dimmed, so
 				     the eye finds the current row without hunting for the
 				     highlighted tile. Two labels because textcolor is static. -->
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>white</textcolor>
 					<label>On Deck</label>
 					<visible>Control.HasFocus(9105)</visible>
@@ -401,15 +401,15 @@
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>grey</textcolor>
 					<label>On Deck</label>
 					<visible>!Control.HasFocus(9105)</visible>
 				</control>
 				<control type="list" id="9105">
 					<left>60</left>
-					<top>48</top>
+					<top>56</top>
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
@@ -436,15 +436,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>306</height>
+				<height>314</height>
 				<!-- The active row's heading is lit and the rest are dimmed, so
 				     the eye finds the current row without hunting for the
 				     highlighted tile. Two labels because textcolor is static. -->
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>white</textcolor>
 					<label>Subscriptions</label>
 					<visible>Control.HasFocus(9106)</visible>
@@ -452,15 +452,15 @@
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>grey</textcolor>
 					<label>Subscriptions</label>
 					<visible>!Control.HasFocus(9106)</visible>
 				</control>
 				<control type="list" id="9106">
 					<left>60</left>
-					<top>48</top>
+					<top>56</top>
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
@@ -487,15 +487,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>306</height>
+				<height>314</height>
 				<!-- The active row's heading is lit and the rest are dimmed, so
 				     the eye finds the current row without hunting for the
 				     highlighted tile. Two labels because textcolor is static. -->
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>white</textcolor>
 					<label>Recommended</label>
 					<visible>Control.HasFocus(9107)</visible>
@@ -503,15 +503,15 @@
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
-					<height>40</height>
-					<font>font20_title</font>
+					<height>48</height>
+					<font>font36_title</font>
 					<textcolor>grey</textcolor>
 					<label>Recommended</label>
 					<visible>!Control.HasFocus(9107)</visible>
 				</control>
 				<control type="list" id="9107">
 					<left>60</left>
-					<top>48</top>
+					<top>56</top>
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
