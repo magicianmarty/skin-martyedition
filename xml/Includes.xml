@@ -320,6 +320,65 @@
 			</control>
 		</definition>
 	</include>
+	<!-- Badges over tile artwork: quality top right, length bottom right.
+	     Image and label only - an item layout binds ListItem per row for those
+	     two control types and nothing else, so a grouplist of buttons here
+	     draws the focused row's values onto every tile in the row.
+
+	     The scrims span the tile rather than hugging the text because a label
+	     cannot size a texture to its content: a fixed plate wide enough for
+	     "4K DV ATMOS" is a large empty bar behind "1080p", and one sized for
+	     "1080p" clips the longer one. -->
+	<include name="MartyTileFlags">
+		<param name="strip_left">4</param>
+		<param name="strip_width">316</param>
+		<param name="top_y">4</param>
+		<param name="bottom_y">152</param>
+		<definition>
+			<control type="image">
+				<left>$PARAM[strip_left]</left>
+				<top>$PARAM[top_y]</top>
+				<width>$PARAM[strip_width]</width>
+				<height>26</height>
+				<texture>colors/black.png</texture>
+				<colordiffuse>99FFFFFF</colordiffuse>
+				<visible>!String.IsEmpty(ListItem.Property(badge_line))</visible>
+			</control>
+			<control type="label">
+				<left>$PARAM[strip_left]</left>
+				<top>$PARAM[top_y]</top>
+				<width>$PARAM[strip_width]</width>
+				<height>26</height>
+				<font>font_flag</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textoffsetx>8</textoffsetx>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.Property(badge_line)]</label>
+			</control>
+			<control type="image">
+				<left>$PARAM[strip_left]</left>
+				<top>$PARAM[bottom_y]</top>
+				<width>$PARAM[strip_width]</width>
+				<height>26</height>
+				<texture>colors/black.png</texture>
+				<colordiffuse>99FFFFFF</colordiffuse>
+				<visible>!String.IsEmpty(ListItem.Duration)</visible>
+			</control>
+			<control type="label">
+				<left>$PARAM[strip_left]</left>
+				<top>$PARAM[bottom_y]</top>
+				<width>$PARAM[strip_width]</width>
+				<height>26</height>
+				<font>font_flag</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textoffsetx>8</textoffsetx>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.Duration]</label>
+			</control>
+		</definition>
+	</include>
 	<include name="MediaFlags">
 		<param name="visible">true</param>
 		<definition>
