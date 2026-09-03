@@ -64,109 +64,275 @@
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<left>0</left><top>330</top><width>1920</width><height>750</height>
+			<left>0</left><top>650</top><width>1920</width><height>430</height>
 			<texture>colors/black.png</texture>
 			<colordiffuse>E6FFFFFF</colordiffuse>
 		</control>
+
 		<control type="label">
-			<right>60</right><top>40</top><width>300</width><height>40</height>
-			<font>font_clock</font><align>right</align><textcolor>grey</textcolor>
+			<left>60</left><top>48</top><width>400</width><height>56</height>
+			<font>font36_title</font><textcolor>white</textcolor>
+			<label>marty[COLOR ffe5a00d]edition[/COLOR]</label>
+		</control>
+		<control type="label">
+			<right>60</right><top>48</top><width>300</width><height>56</height>
+			<font>font27</font><align>right</align><aligny>center</aligny><textcolor>grey</textcolor>
 			<label>$INFO[System.Time]</label>
 		</control>
+		<!-- Real destinations, not decoration: every one of these goes
+		     somewhere, and Up from the first row lands here. -->
+		<control type="grouplist" id="9000">
+			<left>420</left><top>48</top><width>1100</width><height>56</height>
+			<orientation>horizontal</orientation>
+			<itemgap>10</itemgap>
+			<control type="button" id="9001">
+				<width>auto</width>
+				<height>56</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>26</textoffsetx>
+				<textcolor>grey</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>Home</label>
+				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
+				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+				<onleft>9006</onleft>
+				<onright>9002</onright>
+				<ondown>9101</ondown>
+				<onclick>noop</onclick>
+			</control>
+			<control type="button" id="9002">
+				<width>auto</width>
+				<height>56</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>26</textoffsetx>
+				<textcolor>grey</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>Movies</label>
+				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
+				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+				<onleft>9001</onleft>
+				<onright>9003</onright>
+				<ondown>9101</ondown>
+				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/hubs?hub=%2Fhubs%2Fhome%2FrecentlyAdded%3Ftype%3D1&quot;,return)</onclick>
+			</control>
+			<control type="button" id="9003">
+				<width>auto</width>
+				<height>56</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>26</textoffsetx>
+				<textcolor>grey</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>TV Shows</label>
+				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
+				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+				<onleft>9002</onleft>
+				<onright>9004</onright>
+				<ondown>9101</ondown>
+				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/hubs?hub=%2Fhubs%2Fhome%2FrecentlyAdded%3Ftype%3D2&quot;,return)</onclick>
+			</control>
+			<control type="button" id="9004">
+				<width>auto</width>
+				<height>56</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>26</textoffsetx>
+				<textcolor>grey</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>YouTube</label>
+				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
+				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+				<onleft>9003</onleft>
+				<onright>9005</onright>
+				<ondown>9101</ondown>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/&quot;,return)</onclick>
+			</control>
+			<control type="button" id="9005">
+				<width>auto</width>
+				<height>56</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>26</textoffsetx>
+				<textcolor>grey</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>Search</label>
+				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
+				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+				<onleft>9004</onleft>
+				<onright>9006</onright>
+				<ondown>9101</ondown>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/kodion/search/list/&quot;,return)</onclick>
+			</control>
+			<control type="button" id="9006">
+				<width>auto</width>
+				<height>56</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>26</textoffsetx>
+				<textcolor>grey</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>Settings</label>
+				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
+				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+				<onleft>9005</onleft>
+				<onright>9001</onright>
+				<ondown>9101</ondown>
+				<onclick>ActivateWindow(Settings)</onclick>
+			</control>
+		</control>
+
 		<control type="group">
 			<control type="label">
-				<left>60</left><top>128</top><width>1180</width><height>64</height>
+				<left>60</left><top>250</top><width>1100</width><height>70</height>
 				<font>font45_title</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9101).ListItem.Label]</label>
 				<visible>Control.HasFocus(9101)</visible>
 			</control>
+			<control type="label">
+				<left>60</left><top>408</top><width>900</width><height>32</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9101).ListItem.Year,,     ]$INFO[Container(9101).ListItem.Property(badge_line)]</label>
+				<visible>Control.HasFocus(9101)</visible>
+			</control>
 			<control type="textbox">
-				<left>60</left><top>200</top><width>900</width><height>90</height>
+				<left>60</left><top>452</top><width>860</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9101).ListItem.Plot]</label>
 				<visible>Control.HasFocus(9101)</visible>
 			</control>
 			<control type="label">
-				<left>60</left><top>128</top><width>1180</width><height>64</height>
+				<left>60</left><top>250</top><width>1100</width><height>70</height>
 				<font>font45_title</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9102).ListItem.Label]</label>
 				<visible>Control.HasFocus(9102)</visible>
 			</control>
+			<control type="label">
+				<left>60</left><top>408</top><width>900</width><height>32</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9102).ListItem.Year,,     ]$INFO[Container(9102).ListItem.Property(badge_line)]</label>
+				<visible>Control.HasFocus(9102)</visible>
+			</control>
 			<control type="textbox">
-				<left>60</left><top>200</top><width>900</width><height>90</height>
+				<left>60</left><top>452</top><width>860</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9102).ListItem.Plot]</label>
 				<visible>Control.HasFocus(9102)</visible>
 			</control>
 			<control type="label">
-				<left>60</left><top>128</top><width>1180</width><height>64</height>
+				<left>60</left><top>250</top><width>1100</width><height>70</height>
 				<font>font45_title</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9103).ListItem.Label]</label>
 				<visible>Control.HasFocus(9103)</visible>
 			</control>
+			<control type="label">
+				<left>60</left><top>408</top><width>900</width><height>32</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9103).ListItem.Year,,     ]$INFO[Container(9103).ListItem.Property(badge_line)]</label>
+				<visible>Control.HasFocus(9103)</visible>
+			</control>
 			<control type="textbox">
-				<left>60</left><top>200</top><width>900</width><height>90</height>
+				<left>60</left><top>452</top><width>860</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9103).ListItem.Plot]</label>
 				<visible>Control.HasFocus(9103)</visible>
 			</control>
 			<control type="label">
-				<left>60</left><top>128</top><width>1180</width><height>64</height>
+				<left>60</left><top>250</top><width>1100</width><height>70</height>
 				<font>font45_title</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9104).ListItem.Label]</label>
 				<visible>Control.HasFocus(9104)</visible>
 			</control>
+			<control type="label">
+				<left>60</left><top>408</top><width>900</width><height>32</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9104).ListItem.Year,,     ]$INFO[Container(9104).ListItem.Property(badge_line)]</label>
+				<visible>Control.HasFocus(9104)</visible>
+			</control>
 			<control type="textbox">
-				<left>60</left><top>200</top><width>900</width><height>90</height>
+				<left>60</left><top>452</top><width>860</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9104).ListItem.Plot]</label>
 				<visible>Control.HasFocus(9104)</visible>
 			</control>
 			<control type="label">
-				<left>60</left><top>128</top><width>1180</width><height>64</height>
+				<left>60</left><top>250</top><width>1100</width><height>70</height>
 				<font>font45_title</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9105).ListItem.Label]</label>
 				<visible>Control.HasFocus(9105)</visible>
 			</control>
+			<control type="label">
+				<left>60</left><top>408</top><width>900</width><height>32</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9105).ListItem.Year,,     ]$INFO[Container(9105).ListItem.Property(badge_line)]</label>
+				<visible>Control.HasFocus(9105)</visible>
+			</control>
 			<control type="textbox">
-				<left>60</left><top>200</top><width>900</width><height>90</height>
+				<left>60</left><top>452</top><width>860</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9105).ListItem.Plot]</label>
 				<visible>Control.HasFocus(9105)</visible>
 			</control>
 			<control type="label">
-				<left>60</left><top>128</top><width>1180</width><height>64</height>
+				<left>60</left><top>250</top><width>1100</width><height>70</height>
 				<font>font45_title</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9106).ListItem.Label]</label>
 				<visible>Control.HasFocus(9106)</visible>
 			</control>
+			<control type="label">
+				<left>60</left><top>408</top><width>900</width><height>32</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9106).ListItem.Year,,     ]$INFO[Container(9106).ListItem.Property(badge_line)]</label>
+				<visible>Control.HasFocus(9106)</visible>
+			</control>
 			<control type="textbox">
-				<left>60</left><top>200</top><width>900</width><height>90</height>
+				<left>60</left><top>452</top><width>860</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9106).ListItem.Plot]</label>
 				<visible>Control.HasFocus(9106)</visible>
 			</control>
 			<control type="label">
-				<left>60</left><top>128</top><width>1180</width><height>64</height>
+				<left>60</left><top>250</top><width>1100</width><height>70</height>
 				<font>font45_title</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9107).ListItem.Label]</label>
 				<visible>Control.HasFocus(9107)</visible>
 			</control>
+			<control type="label">
+				<left>60</left><top>408</top><width>900</width><height>32</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9107).ListItem.Year,,     ]$INFO[Container(9107).ListItem.Property(badge_line)]</label>
+				<visible>Control.HasFocus(9107)</visible>
+			</control>
 			<control type="textbox">
-				<left>60</left><top>200</top><width>900</width><height>90</height>
+				<left>60</left><top>452</top><width>860</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9107).ListItem.Plot]</label>
 				<visible>Control.HasFocus(9107)</visible>
 			</control>
-			<!-- What the remote does here. Queueing has been available all
-			     along on the context menu, which nobody can find from a sofa;
-			     saying so is worth more than another button that steals focus
-			     from the list the action applies to. Dimmed: it is a hint, not
-			     a heading, and it is on screen permanently. -->
+			<!-- Styled as a button because it is one: OK on the focused
+			     tile plays it. It is a legend for a key that already works,
+			     not a control that would steal focus from the row. -->
+			<control type="image">
+				<left>60</left><top>330</top><width>250</width><height>60</height>
+				<texture border="28">marty/pill.png</texture>
+			</control>
 			<control type="label">
-				<left>60</left><top>294</top><width>1200</width><height>26</height>
-				<font>font10</font><textcolor>grey</textcolor>
-				<label>[COLOR ffe5a00d]OK[/COLOR]  Play      [COLOR ffe5a00d]MENU[/COLOR]  Queue      [COLOR ffe5a00d]BACK[/COLOR]  Kodi menu</label>
+				<left>60</left><top>330</top><width>250</width><height>60</height>
+				<font>font13</font><align>center</align><aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<label>OK   Watch Now</label>
+			</control>
+			<control type="label">
+				<left>340</left><top>330</top><width>700</width><height>60</height>
+				<font>font12</font><aligny>center</aligny><textcolor>grey</textcolor>
+				<label>[COLOR ffe5a00d]MENU[/COLOR]  Queue     [COLOR ffe5a00d]BACK[/COLOR]  Kodi menu</label>
 			</control>
 		</control>
 
@@ -174,17 +340,14 @@
 		     hides half its content below the fold is not a home screen. -->
 		<control type="grouplist" id="9100">
 			<left>0</left>
-			<top>330</top>
+			<top>650</top>
 			<width>1920</width>
-			<height>740</height>
+			<height>430</height>
 			<itemgap>0</itemgap>
 			<orientation>vertical</orientation>
 			<scrolltime tween="cubic" easing="out">400</scrolltime>
 			<control type="group">
-				<height>314</height>
-				<!-- The active row's heading is lit and the rest are dimmed, so
-				     the eye finds the current row without hunting for the
-				     highlighted tile. Two labels because textcolor is static. -->
+				<height>316</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -209,7 +372,7 @@
 					<width>1800</width>
 					<height>254</height>
 					<orientation>horizontal</orientation>
-					<onup>9101</onup>
+					<onup>9001</onup>
 					<ondown>9102</ondown>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
@@ -232,10 +395,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>314</height>
-				<!-- The active row's heading is lit and the rest are dimmed, so
-				     the eye finds the current row without hunting for the
-				     highlighted tile. Two labels because textcolor is static. -->
+				<height>316</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -283,10 +443,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>314</height>
-				<!-- The active row's heading is lit and the rest are dimmed, so
-				     the eye finds the current row without hunting for the
-				     highlighted tile. Two labels because textcolor is static. -->
+				<height>400</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -309,23 +466,23 @@
 					<left>60</left>
 					<top>56</top>
 					<width>1800</width>
-					<height>254</height>
+					<height>338</height>
 					<orientation>horizontal</orientation>
 					<onup>9102</onup>
 					<ondown>9104</ondown>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
-					<itemlayout width="348" height="254">
-						<include content="MartyHomeTile">
+					<itemlayout width="244" height="338">
+						<include content="MartyPosterTile">
 							<param name="focused" value="false" />
 						</include>
 					</itemlayout>
-					<focusedlayout width="348" height="254">
+					<focusedlayout width="244" height="338">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
-							<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="162,112">Focus</animation>
-							<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="162,112">UnFocus</animation>
-							<include content="MartyHomeTile">
+							<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="110,165">Focus</animation>
+							<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="110,165">UnFocus</animation>
+							<include content="MartyPosterTile">
 								<param name="focused" value="true" />
 							</include>
 						</control>
@@ -334,10 +491,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>314</height>
-				<!-- The active row's heading is lit and the rest are dimmed, so
-				     the eye finds the current row without hunting for the
-				     highlighted tile. Two labels because textcolor is static. -->
+				<height>400</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -360,23 +514,23 @@
 					<left>60</left>
 					<top>56</top>
 					<width>1800</width>
-					<height>254</height>
+					<height>338</height>
 					<orientation>horizontal</orientation>
 					<onup>9103</onup>
 					<ondown>9105</ondown>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
-					<itemlayout width="348" height="254">
-						<include content="MartyHomeTile">
+					<itemlayout width="244" height="338">
+						<include content="MartyPosterTile">
 							<param name="focused" value="false" />
 						</include>
 					</itemlayout>
-					<focusedlayout width="348" height="254">
+					<focusedlayout width="244" height="338">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
-							<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="162,112">Focus</animation>
-							<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="162,112">UnFocus</animation>
-							<include content="MartyHomeTile">
+							<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="110,165">Focus</animation>
+							<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="110,165">UnFocus</animation>
+							<include content="MartyPosterTile">
 								<param name="focused" value="true" />
 							</include>
 						</control>
@@ -385,10 +539,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>314</height>
-				<!-- The active row's heading is lit and the rest are dimmed, so
-				     the eye finds the current row without hunting for the
-				     highlighted tile. Two labels because textcolor is static. -->
+				<height>316</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -436,10 +587,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>314</height>
-				<!-- The active row's heading is lit and the rest are dimmed, so
-				     the eye finds the current row without hunting for the
-				     highlighted tile. Two labels because textcolor is static. -->
+				<height>316</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -487,10 +635,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>314</height>
-				<!-- The active row's heading is lit and the rest are dimmed, so
-				     the eye finds the current row without hunting for the
-				     highlighted tile. Two labels because textcolor is static. -->
+				<height>316</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -537,6 +682,13 @@
 					<content>plugin://plugin.video.youtube/special/recommendations/</content>
 				</control>
 			</control>
+		</control>
+		<!-- Rows scrolling out of frame leave their captions stranded above
+		     the next heading, which reads as debris rather than as content.
+		     Drawn after the list so it covers what the list leaves behind. -->
+		<control type="image">
+			<left>0</left><top>650</top><width>1920</width><height>64</height>
+			<texture>marty/fade-top.png</texture>
 		</control>
 	</controls>
 </window>

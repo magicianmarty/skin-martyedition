@@ -166,7 +166,7 @@
 				<width>388</width>
 				<height>216</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture background="true" fallback="DefaultVideo.png">$VAR[MartyTileArt]</texture>
+				<texture background="true" diffuse="marty/round-land.png" fallback="DefaultVideo.png">$VAR[MartyTileArt]</texture>
 			</control>
 			<include content="MartyTileFlags">
 				<param name="strip_left" value="4" />
@@ -214,6 +214,63 @@
 		</definition>
 	</include>
 
+	<!-- Portrait tile for library rows. Plex serves movies and shows as 2:3
+	     posters, so a poster row draws them at their own shape instead of
+	     cropping a landscape box out of them. No caption: the poster carries
+	     the title, and the hero above spells out whatever has focus. -->
+	<include name="MartyPosterTile">
+		<param name="focused">false</param>
+		<definition>
+			<control type="image">
+				<left>-8</left>
+				<top>-8</top>
+				<width>236</width>
+				<height>346</height>
+				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<visible>$PARAM[focused]</visible>
+			</control>
+			<control type="image">
+				<left>-4</left>
+				<top>-4</top>
+				<width>228</width>
+				<height>338</height>
+				<texture colordiffuse="button_focus" diffuse="marty/round-poster.png">colors/white.png</texture>
+				<visible>$PARAM[focused]</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>220</width>
+				<height>330</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" diffuse="marty/round-poster.png" fallback="DefaultVideo.png">$VAR[MartyTilePoster]</texture>
+			</control>
+			<include content="MartyTileFlags">
+				<param name="strip_left" value="0" />
+				<param name="strip_width" value="220" />
+				<param name="top_y" value="0" />
+				<param name="bottom_y" value="298" />
+			</include>
+			<control type="image">
+				<left>0</left>
+				<top>324</top>
+				<width>220</width>
+				<height>6</height>
+				<texture>colors/black.png</texture>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
+			</control>
+			<control type="progress">
+				<left>0</left>
+				<top>324</top>
+				<width>220</width>
+				<height>6</height>
+				<info>ListItem.PercentPlayed</info>
+				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
+			</control>
+		</definition>
+	</include>
+
 	<include name="MartyHomeTile">
 		<param name="focused">false</param>
 		<definition>
@@ -241,7 +298,7 @@
 				<width>316</width>
 				<height>174</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture background="true" fallback="DefaultVideo.png">$VAR[MartyTileArt]</texture>
+				<texture background="true" diffuse="marty/round-land.png" fallback="DefaultVideo.png">$VAR[MartyTileArt]</texture>
 			</control>
 			<include content="MartyTileFlags">
 				<param name="strip_left" value="4" />
