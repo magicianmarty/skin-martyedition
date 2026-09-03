@@ -251,7 +251,7 @@
 				<height>6</height>
 				<texture>colors/black.png</texture>
 				<colordiffuse>AAFFFFFF</colordiffuse>
-				<visible>!String.IsEmpty(ListItem.Property(resume_percent))</visible>
+				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
 			</control>
 			<control type="progress">
 				<left>4</left>
@@ -259,7 +259,7 @@
 				<width>316</width>
 				<height>6</height>
 				<info>ListItem.PercentPlayed</info>
-				<visible>!String.IsEmpty(ListItem.Property(resume_percent))</visible>
+				<visible>[!String.IsEmpty(ListItem.Property(resume_percent)) | ListItem.IsResumable]</visible>
 			</control>
 			<control type="label">
 				<left>4</left>
