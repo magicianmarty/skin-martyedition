@@ -188,6 +188,21 @@
 					<align>left</align>
 					<textcolor>grey</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
+					<visible>String.IsEmpty(ListItem.Artist)</visible>
+				</control>
+				<control type="label">
+					<left>6</left>
+					<top>26</top>
+					<width>384</width>
+					<height>24</height>
+					<font>font10</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<!-- The channel, which the add-on publishes as the artist.
+					     Label2 is the fallback for anything that has no
+					     artist, such as folders and non-YouTube items. -->
+					<label>$INFO[ListItem.Artist]</label>
+					<visible>!String.IsEmpty(ListItem.Artist)</visible>
 				</control>
 			</control>
 		</definition>
