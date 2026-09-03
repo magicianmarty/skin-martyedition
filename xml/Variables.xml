@@ -2547,4 +2547,12 @@
 		<value condition="String.IsEqual(VideoPlayer.HdrDetail,7FEL)">P7 [COLOR lightgreen]FEL[/COLOR]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.HdrDetail)">P$INFO[VideoPlayer.HdrDetail]</value>
 	</variable>
+	<!-- Rows are landscape. Plex sends a 2:3 poster as the thumb for movies
+	     and shows, which a landscape box crops to a middle band, so anything
+	     that offers landscape art gets asked for it first. Library items that
+	     set no landscape art still fall through to their thumb. -->
+	<variable name="MartyTileArt">
+		<value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value>$INFO[ListItem.Art(thumb)]</value>
+	</variable>
 </includes>
