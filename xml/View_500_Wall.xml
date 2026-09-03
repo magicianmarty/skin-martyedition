@@ -227,6 +227,28 @@
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 			</control>
+			<!-- How far in you are. Continue Watching is the row people use
+			     most and "how much is left" is the question they are asking,
+			     so it is drawn on the artwork rather than left in a tooltip.
+			     Hidden entirely for anything unwatched, so ordinary rows do
+			     not grow a stray line. -->
+			<control type="image">
+				<left>4</left>
+				<top>168</top>
+				<width>316</width>
+				<height>6</height>
+				<texture>colors/black.png</texture>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<visible>!String.IsEmpty(ListItem.Property(resume_percent))</visible>
+			</control>
+			<control type="progress">
+				<left>4</left>
+				<top>168</top>
+				<width>316</width>
+				<height>6</height>
+				<info>ListItem.PercentPlayed</info>
+				<visible>!String.IsEmpty(ListItem.Property(resume_percent))</visible>
+			</control>
 			<control type="label">
 				<left>4</left>
 				<top>188</top>
