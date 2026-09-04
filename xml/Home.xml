@@ -422,6 +422,7 @@
 					<orientation>horizontal</orientation>
 					<onup>9001</onup>
 					<ondown>9102</ondown>
+					<onclick>$INFO[ListItem.Property(marty_click)]</onclick>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
 					<itemlayout width="244" height="338">
@@ -470,6 +471,7 @@
 					<orientation>horizontal</orientation>
 					<onup>9101</onup>
 					<ondown>9103</ondown>
+					<onclick>$INFO[ListItem.Property(marty_click)]</onclick>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
 					<itemlayout width="244" height="338">
@@ -518,6 +520,7 @@
 					<orientation>horizontal</orientation>
 					<onup>9102</onup>
 					<ondown>9104</ondown>
+					<onclick>$INFO[ListItem.Property(marty_click)]</onclick>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
 					<itemlayout width="244" height="338">
@@ -566,6 +569,7 @@
 					<orientation>horizontal</orientation>
 					<onup>9103</onup>
 					<ondown>9105</ondown>
+					<onclick>$INFO[ListItem.Property(marty_click)]</onclick>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
 					<itemlayout width="244" height="338">
