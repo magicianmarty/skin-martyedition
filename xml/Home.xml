@@ -421,15 +421,17 @@
 		     hides half its content below the fold is not a home screen. -->
 		<control type="grouplist" id="9100">
 			<left>0</left>
-			<top>616</top>
+			<!-- 680 + 400 = 1080: the row ends on the bottom of the screen, so
+			     there is no strip below it for the next row to show through. -->
+			<top>680</top>
 			<width>1920</width>
-			<height>464</height>
+			<!-- Exactly one row tall, and every row is 400. A 64px sliver of
+			     the next row is not a peek, it is a band of tile bottoms, and
+			     no amount of fading over it made it read as anything else. -->
+			<height>400</height>
 			<itemgap>0</itemgap>
 			<orientation>vertical</orientation>
 			<scrolltime tween="cubic" easing="out">400</scrolltime>
-			<control type="group">
-				<height>64</height>
-			</control>
 			<control type="group">
 				<height>400</height>
 				<control type="label">
@@ -627,7 +629,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>316</height>
+				<height>400</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -675,7 +677,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>316</height>
+				<height>400</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
@@ -723,7 +725,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<height>316</height>
+				<height>400</height>
 				<control type="label">
 					<left>60</left>
 					<width>1200</width>
