@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">500</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-	<views>500,51,54,55,52,53,50</views>
+	<views>590,500,51,54,55,52,53,50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -31,6 +31,59 @@
 				<texture>colors/black.png</texture>
 				<colordiffuse>C0FFFFFF</colordiffuse>
 				<visible>!String.IsEmpty(Container.Property(game_fanart))</visible>
+			</control>
+			<!-- The detail page's own view. The two rows Kodi gives us - its
+			     parent row and the add-on's Play row - are the only things that
+			     can launch a game with the right emulator, so they cannot be
+			     replaced with plain buttons. Drawn as pills instead, with the
+			     parent row relabelled: ".." reads as Return. -->
+			<control type="list" id="590">
+				<left>380</left>
+				<top>640</top>
+				<width>900</width>
+				<height>60</height>
+				<orientation>horizontal</orientation>
+				<itemgap>14</itemgap>
+				<itemlayout width="234" height="56">
+				<control type="image">
+					<width>220</width><height>56</height>
+					<texture border="28" colordiffuse="30FFFFFF">marty/pill.png</texture>
+				</control>
+				<control type="label">
+					<width>220</width><height>56</height>
+					<font>font13</font><align>center</align><aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!ListItem.IsParentFolder</visible>
+				</control>
+				<control type="label">
+					<width>220</width><height>56</height>
+					<font>font13</font><align>center</align><aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<label>Return</label>
+					<visible>ListItem.IsParentFolder</visible>
+				</control>
+				</itemlayout>
+				<focusedlayout width="234" height="56">
+				<control type="image">
+					<width>220</width><height>56</height>
+					<texture border="28" colordiffuse="button_focus">marty/pill.png</texture>
+				</control>
+				<control type="label">
+					<width>220</width><height>56</height>
+					<font>font13</font><align>center</align><aligny>center</aligny>
+					<textcolor>black</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!ListItem.IsParentFolder</visible>
+				</control>
+				<control type="label">
+					<width>220</width><height>56</height>
+					<font>font13</font><align>center</align><aligny>center</aligny>
+					<textcolor>black</textcolor>
+					<label>Return</label>
+					<visible>ListItem.IsParentFolder</visible>
+				</control>
+				</focusedlayout>
 			</control>
 			<include>View_50_List</include>
 			<include>View_51_Poster</include>
@@ -73,11 +126,6 @@
 					<font>font13</font><textcolor>grey</textcolor>
 					<label>$INFO[Container.Property(game_plot_line)]</label>
 					<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
-				</control>
-				<control type="label">
-					<top>560</top><width>1080</width><height>36</height>
-					<font>font12</font><textcolor>button_focus</textcolor>
-					<label>Select to play   ·   Back to return</label>
 				</control>
 			</control>
 			<!-- Platform filter. Reachable from the A-Z strip: right off the
