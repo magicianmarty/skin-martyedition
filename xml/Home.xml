@@ -237,9 +237,10 @@
 				<visible>Control.HasFocus(9101)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9101).ListItem.Plot]</label>
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9101)</visible>
 			</control>
 			<control type="label">
@@ -261,9 +262,10 @@
 				<visible>Control.HasFocus(9102)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9102).ListItem.Plot]</label>
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9102)</visible>
 			</control>
 			<control type="label">
@@ -285,9 +287,10 @@
 				<visible>Control.HasFocus(9103)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9103).ListItem.Plot]</label>
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9103)</visible>
 			</control>
 			<control type="label">
@@ -309,9 +312,10 @@
 				<visible>Control.HasFocus(9104)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9104).ListItem.Plot]</label>
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9104)</visible>
 			</control>
 			<control type="label">
@@ -333,9 +337,10 @@
 				<visible>Control.HasFocus(9105)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9105).ListItem.Plot]</label>
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9105)</visible>
 			</control>
 			<control type="label">
@@ -357,9 +362,10 @@
 				<visible>Control.HasFocus(9106)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9106).ListItem.Plot]</label>
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9106)</visible>
 			</control>
 			<control type="label">
@@ -381,9 +387,10 @@
 				<visible>Control.HasFocus(9107)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9107).ListItem.Plot]</label>
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9107)</visible>
 			</control>
 			<control type="label">
