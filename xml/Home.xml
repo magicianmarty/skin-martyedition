@@ -196,7 +196,7 @@
 				<onleft>9006</onleft>
 				<onright>9007</onright>
 				<ondown>9101</ondown>
-				<onclick>ActivateWindow(Games,&quot;plugin://plugin.program.martygames/&quot;,return)</onclick>
+				<onclick>ActivateWindow(Games,&quot;plugin://plugin.program.martygames/?action=all&quot;,return)</onclick>
 			</control>
 			<control type="button" id="9007">
 				<width>auto</width>
