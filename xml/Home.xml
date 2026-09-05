@@ -89,23 +89,6 @@
 			<left>400</left><top>48</top><width>1180</width><height>56</height>
 			<orientation>horizontal</orientation>
 			<itemgap>8</itemgap>
-			<control type="button" id="9001">
-				<width>auto</width>
-				<height>56</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textoffsetx>26</textoffsetx>
-				<textcolor>grey</textcolor>
-				<focusedcolor>black</focusedcolor>
-				<label>Home</label>
-				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
-				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
-				<onleft>9007</onleft>
-				<onright>9002</onright>
-				<ondown>9101</ondown>
-				<onclick>noop</onclick>
-			</control>
 			<control type="button" id="9002">
 				<width>auto</width>
 				<height>56</height>
@@ -118,7 +101,7 @@
 				<label>Movies</label>
 				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
 				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
-				<onleft>9001</onleft>
+				<onleft>9007</onleft>
 				<onright>9003</onright>
 				<ondown>9101</ondown>
 				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/library?type=movie&quot;,return)</onclick>
@@ -187,9 +170,26 @@
 				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
 				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 				<onleft>9005</onleft>
-				<onright>9007</onright>
+				<onright>9008</onright>
 				<ondown>9101</ondown>
 				<onclick>ActivateWindow(Videos,&quot;plugin://script.plexmod/search&quot;,return)</onclick>
+			</control>
+			<control type="button" id="9008">
+				<width>auto</width>
+				<height>56</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx>26</textoffsetx>
+				<textcolor>grey</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>Games</label>
+				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
+				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+				<onleft>9006</onleft>
+				<onright>9007</onright>
+				<ondown>9101</ondown>
+				<onclick>ActivateWindow(Games)</onclick>
 			</control>
 			<control type="button" id="9007">
 				<width>auto</width>
@@ -203,8 +203,8 @@
 				<label>Settings</label>
 				<texturefocus border="28" colordiffuse="button_focus">marty/pill.png</texturefocus>
 				<texturenofocus border="28" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
-				<onleft>9006</onleft>
-				<onright>9001</onright>
+				<onleft>9008</onleft>
+				<onright>9002</onright>
 				<ondown>9101</ondown>
 				<onclick>ActivateWindow(Settings)</onclick>
 			</control>
@@ -420,7 +420,7 @@
 					<width>1800</width>
 					<height>338</height>
 					<orientation>horizontal</orientation>
-					<onup>9001</onup>
+					<onup>9002</onup>
 					<ondown>9102</ondown>
 					<onclick>$INFO[ListItem.Property(marty_click)]</onclick>
 					<preloaditems>2</preloaditems>
