@@ -19,6 +19,19 @@
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<control type="image">
+				<left>0</left><top>0</top><width>1920</width><height>1080</height>
+				<aspectratio>scale</aspectratio>
+				<fadetime>400</fadetime>
+				<texture background="true">$INFO[Container.Property(game_fanart)]</texture>
+				<visible>!String.IsEmpty(Container.Property(game_fanart))</visible>
+			</control>
+			<control type="image">
+				<left>0</left><top>0</top><width>1920</width><height>1080</height>
+				<texture>colors/black.png</texture>
+				<colordiffuse>C0FFFFFF</colordiffuse>
+				<visible>!String.IsEmpty(Container.Property(game_fanart))</visible>
+			</control>
 			<include>View_50_List</include>
 			<include>View_51_Poster</include>
 			<include>View_52_IconWall</include>
