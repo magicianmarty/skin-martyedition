@@ -27,12 +27,52 @@
 			<include>View_55_WideList</include>
 			<include>View_500_Wall</include>
 			<include>CommonScrollbars</include>
+			<!-- One game on its own page. The add-on serves it as a listing
+			     with a single Play row, so the tile the views draw is the
+			     focusable Play button and this is the detail beside it. -->
+			<control type="group">
+				<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.martygames/?action=info)</visible>
+				<left>760</left>
+				<top>150</top>
+				<width>1080</width>
+				<control type="image">
+					<left>-420</left><top>0</top><width>340</width><height>476</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[Container.Property(game_poster)]</texture>
+				</control>
+				<control type="label">
+					<width>1080</width><height>80</height>
+					<font>font45_title</font><textcolor>white</textcolor>
+					<label>$INFO[Container.PluginCategory]</label>
+				</control>
+				<control type="label">
+					<top>92</top><width>1080</width><height>30</height>
+					<font>font12</font><textcolor>white</textcolor>
+					<label>$INFO[Container.Property(game_facts_line)]</label>
+				</control>
+				<control type="label">
+					<top>126</top><width>1080</width><height>28</height>
+					<font>font10</font><textcolor>grey</textcolor>
+					<label>$INFO[Container.Property(game_people_line)]</label>
+				</control>
+				<control type="textbox">
+					<top>176</top><width>1000</width><height>360</height>
+					<font>font13</font><textcolor>grey</textcolor>
+					<label>$INFO[Container.Property(game_plot_line)]</label>
+					<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
+				</control>
+				<control type="label">
+					<top>560</top><width>1080</width><height>36</height>
+					<font>font12</font><textcolor>button_focus</textcolor>
+					<label>Select to play   ·   Back to return</label>
+				</control>
+			</control>
 			<!-- Platform filter. Reachable from the A-Z strip: right off the
 			     wall, then up. The systems are spelled out here rather than
 			     read from the add-on because a skin cannot iterate a property,
 			     and this list only changes when a new emulator is installed. -->
 			<control type="group" id="9300">
-				<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.martygames/)</visible>
+				<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.martygames/) + !String.StartsWith(Container.FolderPath,plugin://plugin.program.martygames/?action=info)</visible>
 				<right>60</right>
 				<top>74</top>
 				<height>40</height>
