@@ -27,6 +27,478 @@
 			<include>View_55_WideList</include>
 			<include>View_500_Wall</include>
 			<include>CommonScrollbars</include>
+			<!-- The alphabet down the side, as the Plex app has. It jumps to
+			     where a letter starts in the full listing rather than
+			     filtering to it: filtering meant picking Z left you in a
+			     listing that contained only Z and nothing to scroll on into.
+
+			     The add-on publishes each letter's position, because it is the
+			     only side that knows the sort order Plex used - "The Princess
+			     Bride" files under P - and which letters the library actually
+			     has. Letters it has none of do not draw. -->
+			<control type="group">
+				<visible>!String.IsEmpty(Container.Property(alphabet))</visible>
+				<right>8</right>
+				<top>118</top>
+				<width>44</width>
+				<height>952</height>
+				<control type="grouplist" id="9200">
+					<width>44</width>
+					<height>952</height>
+					<orientation>vertical</orientation>
+					<itemgap>0</itemgap>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<control type="button" id="9201">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>All</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,0)</onclick>
+						<visible>true</visible>
+					</control>
+					<control type="button" id="9210">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>#</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_#)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_#))</visible>
+					</control>
+					<control type="button" id="9211">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>A</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_A)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_A))</visible>
+					</control>
+					<control type="button" id="9212">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>B</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_B)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_B))</visible>
+					</control>
+					<control type="button" id="9213">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>C</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_C)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_C))</visible>
+					</control>
+					<control type="button" id="9214">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>D</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_D)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_D))</visible>
+					</control>
+					<control type="button" id="9215">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>E</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_E)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_E))</visible>
+					</control>
+					<control type="button" id="9216">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>F</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_F)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_F))</visible>
+					</control>
+					<control type="button" id="9217">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>G</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_G)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_G))</visible>
+					</control>
+					<control type="button" id="9218">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>H</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_H)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_H))</visible>
+					</control>
+					<control type="button" id="9219">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>I</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_I)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_I))</visible>
+					</control>
+					<control type="button" id="9220">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>J</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_J)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_J))</visible>
+					</control>
+					<control type="button" id="9221">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>K</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_K)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_K))</visible>
+					</control>
+					<control type="button" id="9222">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>L</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_L)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_L))</visible>
+					</control>
+					<control type="button" id="9223">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>M</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_M)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_M))</visible>
+					</control>
+					<control type="button" id="9224">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>N</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_N)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_N))</visible>
+					</control>
+					<control type="button" id="9225">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>O</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_O)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_O))</visible>
+					</control>
+					<control type="button" id="9226">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>P</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_P)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_P))</visible>
+					</control>
+					<control type="button" id="9227">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>Q</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Q)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_Q))</visible>
+					</control>
+					<control type="button" id="9228">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>R</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_R)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_R))</visible>
+					</control>
+					<control type="button" id="9229">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>S</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_S)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_S))</visible>
+					</control>
+					<control type="button" id="9230">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>T</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_T)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_T))</visible>
+					</control>
+					<control type="button" id="9231">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>U</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_U)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_U))</visible>
+					</control>
+					<control type="button" id="9232">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>V</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_V)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_V))</visible>
+					</control>
+					<control type="button" id="9233">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>W</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_W)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_W))</visible>
+					</control>
+					<control type="button" id="9234">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>X</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_X)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_X))</visible>
+					</control>
+					<control type="button" id="9235">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>Y</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Y)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_Y))</visible>
+					</control>
+					<control type="button" id="9236">
+						<width>44</width>
+						<height>33</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>Z</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>500</onleft>
+						<onright>500</onright>
+						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Z)])</onclick>
+						<visible>!String.IsEmpty(Container.Property(letter_index_Z))</visible>
+					</control>
+				</control>
+			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
