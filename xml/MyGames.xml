@@ -27,6 +27,143 @@
 			<include>View_55_WideList</include>
 			<include>View_500_Wall</include>
 			<include>CommonScrollbars</include>
+			<!-- Platform filter. Reachable from the A-Z strip: right off the
+			     wall, then up. The systems are spelled out here rather than
+			     read from the add-on because a skin cannot iterate a property,
+			     and this list only changes when a new emulator is installed. -->
+			<control type="group" id="9300">
+				<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.martygames/)</visible>
+				<right>60</right>
+				<top>74</top>
+				<height>40</height>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<itemgap>6</itemgap>
+					<height>36</height>
+					<width>1400</width>
+					<control type="button" id="9301">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>All</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=all)</onclick>
+					</control>
+					<control type="button" id="9302">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>Amiga</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=amiga)</onclick>
+					</control>
+					<control type="button" id="9303">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>Mega Drive</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=megadrive)</onclick>
+					</control>
+					<control type="button" id="9304">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>DOS</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=dos)</onclick>
+					</control>
+					<control type="button" id="9305">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>PlayStation</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=psx)</onclick>
+					</control>
+					<control type="button" id="9306">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>NES</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=nes)</onclick>
+					</control>
+					<control type="button" id="9307">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>C64</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=c64)</onclick>
+					</control>
+					<control type="button" id="9308">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>Doom</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=doom)</onclick>
+					</control>
+				</control>
+			</control>
 			<!-- The alphabet down the side, as the Plex app has. It jumps to
 			     where a letter starts in the full listing rather than
 			     filtering to it: filtering meant picking Z left you in a
@@ -50,6 +187,7 @@
 					<onleft>500</onleft>
 					<onright>500</onright>
 					<control type="button" id="9201">
+						<onup>9301</onup>
 						<width>44</width>
 						<height>33</height>
 						<font>font10</font>
