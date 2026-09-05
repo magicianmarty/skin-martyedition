@@ -80,7 +80,12 @@
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<left>0</left><top>616</top><width>1920</width><height>464</height>
+			<left>0</left><top>616</top><width>1920</width><height>160</height>
+			<texture>marty/fade-up.png</texture>
+			<colordiffuse>70FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<left>0</left><top>776</top><width>1920</width><height>304</height>
 			<texture>colors/black.png</texture>
 			<colordiffuse>70FFFFFF</colordiffuse>
 		</control>
@@ -835,7 +840,9 @@
 		     Drawn after the list so it covers what the list leaves behind. -->
 		<control type="image">
 			<left>0</left><top>616</top><width>1920</width><height>64</height>
-			<texture>marty/fade-top.png</texture>
+			<!-- Full black here put a hard line back on top of the scrim's
+			     fade. It only has to hide captions, not paint a bar. -->
+			<texture colordiffuse="A0FFFFFF">marty/fade-top.png</texture>
 		</control>
 	</controls>
 </window>
