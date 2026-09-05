@@ -59,7 +59,7 @@
 						<width>525</width>
 						<bottom>100</bottom>
 						<visible>!ListItem.IsCollection</visible>
-						<label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
+						<label>$INFO[ListItem.Property(facts_line),,[CR]]$INFO[ListItem.Property(people_line),,[CR][CR]]$INFO[ListItem.Property(plot_line)][CR][CR]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -72,7 +72,7 @@
 						<font>font27</font>
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
-						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+						<visible>String.IsEmpty(ListItem.Property(plot_line)) + String.IsEmpty(ListItem.Property(facts_line)) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="group">
 						<left>20</left>

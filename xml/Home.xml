@@ -400,7 +400,7 @@
 			<control type="textbox">
 				<left>60</left><top>392</top><width>900</width><height>108</height>
 				<font>font13</font><textcolor>grey</textcolor>
-				<label>$INFO[Container(9108).ListItem.Plot]</label>
+				<label>$INFO[Container(9108).ListItem.Property(plot_line)]</label>
 				<visible>Control.HasFocus(9108)</visible>
 			</control>
 		</control>
