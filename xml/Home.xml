@@ -820,12 +820,5 @@
 				</control>
 			</control>
 		</control>
-		<!-- Softens the top of the carousel. Drawn after the list, so tiles
-		     scrolling up fade out instead of being chopped off at a line, and
-		     transparent at both ends so the band itself has no edge. -->
-		<control type="image">
-			<left>0</left><top>496</top><width>1920</width><height>240</height>
-			<texture>marty/fade-carousel.png</texture>
-		</control>
 	</controls>
 </window>
