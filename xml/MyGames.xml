@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">500</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-	<views>590,500,51,54,55,52,53,50</views>
+	<views>500,51,54,55,52,53,50,590</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -160,6 +160,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=all)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 					<control type="button" id="9302">
 						<width>auto</width>
@@ -175,6 +176,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=amiga)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 					<control type="button" id="9303">
 						<width>auto</width>
@@ -190,6 +192,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=megadrive)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 					<control type="button" id="9304">
 						<width>auto</width>
@@ -205,6 +208,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=dos)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 					<control type="button" id="9305">
 						<width>auto</width>
@@ -220,6 +224,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=psx)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 					<control type="button" id="9306">
 						<width>auto</width>
@@ -235,6 +240,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=nes)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 					<control type="button" id="9307">
 						<width>auto</width>
@@ -250,6 +256,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=c64)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 					<control type="button" id="9308">
 						<width>auto</width>
@@ -265,6 +272,7 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=doom)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 				</control>
 			</control>
