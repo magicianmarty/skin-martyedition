@@ -59,6 +59,13 @@
 			<texture background="true">$INFO[Container(9107).ListItem.Art(fanart)]</texture>
 			<visible>Control.HasFocus(9107)</visible>
 		</control>
+		<control type="image">
+			<left>0</left><top>0</top><width>1920</width><height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<texture background="true">$INFO[Container(9108).ListItem.Art(fanart)]</texture>
+			<visible>Control.HasFocus(9108)</visible>
+		</control>
 		<!-- Two scrims, not one. A single flat wash dark enough to read
 		     text over also flattens the artwork; this keeps the top of the
 		     picture legible and puts the weight where the rows sit. -->
