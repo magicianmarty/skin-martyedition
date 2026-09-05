@@ -122,7 +122,10 @@
 					<label>$INFO[Container.Property(game_people_line)]</label>
 				</control>
 				<control type="textbox">
-					<top>176</top><width>1000</width><height>360</height>
+					<!-- Ends clear of the pills at y=640: the group starts at 150,
+					     so 176+260 stops at 586. Long synopses scroll rather
+					     than run on into the buttons. -->
+					<top>176</top><width>1000</width><height>260</height>
 					<font>font13</font><textcolor>grey</textcolor>
 					<label>$INFO[Container.Property(game_plot_line)]</label>
 					<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
