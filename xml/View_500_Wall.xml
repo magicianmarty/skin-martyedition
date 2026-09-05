@@ -15,6 +15,7 @@
 				<onleft>9000</onleft>
 				<onright condition="!String.IsEmpty(Container.Property(alphabet))">9200</onright>
 				<onright>531</onright>
+				<onup condition="Control.IsVisible(9300) + Container(500).Row(0)">9301</onup>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">500</onup>
 				<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
 				<ondown>500</ondown>

@@ -289,7 +289,7 @@
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
 					<onleft>500</onleft>
-					<onright>9301</onright>
+					<onright>500</onright>
 					<control type="button" id="9201">
 						<onup>9301</onup>
 						<width>44</width>
@@ -303,7 +303,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,0)</onclick>
 						<visible>true</visible>
 					</control>
@@ -319,7 +319,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_#)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_#))</visible>
 					</control>
@@ -335,7 +335,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_A)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_A))</visible>
 					</control>
@@ -351,7 +351,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_B)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_B))</visible>
 					</control>
@@ -367,7 +367,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_C)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_C))</visible>
 					</control>
@@ -383,7 +383,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_D)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_D))</visible>
 					</control>
@@ -399,7 +399,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_E)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_E))</visible>
 					</control>
@@ -415,7 +415,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_F)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_F))</visible>
 					</control>
@@ -431,7 +431,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_G)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_G))</visible>
 					</control>
@@ -447,7 +447,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_H)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_H))</visible>
 					</control>
@@ -463,7 +463,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_I)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_I))</visible>
 					</control>
@@ -479,7 +479,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_J)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_J))</visible>
 					</control>
@@ -495,7 +495,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_K)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_K))</visible>
 					</control>
@@ -511,7 +511,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_L)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_L))</visible>
 					</control>
@@ -527,7 +527,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_M)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_M))</visible>
 					</control>
@@ -543,7 +543,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_N)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_N))</visible>
 					</control>
@@ -559,7 +559,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_O)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_O))</visible>
 					</control>
@@ -575,7 +575,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_P)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_P))</visible>
 					</control>
@@ -591,7 +591,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Q)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_Q))</visible>
 					</control>
@@ -607,7 +607,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_R)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_R))</visible>
 					</control>
@@ -623,7 +623,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_S)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_S))</visible>
 					</control>
@@ -639,7 +639,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_T)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_T))</visible>
 					</control>
@@ -655,7 +655,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_U)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_U))</visible>
 					</control>
@@ -671,7 +671,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_V)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_V))</visible>
 					</control>
@@ -687,7 +687,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_W)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_W))</visible>
 					</control>
@@ -703,7 +703,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_X)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_X))</visible>
 					</control>
@@ -719,7 +719,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Y)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_Y))</visible>
 					</control>
@@ -735,7 +735,7 @@
 						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onleft>500</onleft>
-						<onright>9301</onright>
+						<onright>500</onright>
 						<onclick>SetFocus(500,$INFO[Container.Property(letter_index_Z)])</onclick>
 						<visible>!String.IsEmpty(Container.Property(letter_index_Z))</visible>
 					</control>
