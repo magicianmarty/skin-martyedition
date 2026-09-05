@@ -66,28 +66,13 @@
 			<texture background="true">$INFO[Container(9108).ListItem.Art(fanart)]</texture>
 			<visible>Control.HasFocus(9108)</visible>
 		</control>
-		<!-- Two scrims, not one. A single flat wash dark enough to read
-		     text over also flattens the artwork; this keeps the top of the
-		     picture legible and puts the weight where the rows sit.
-
-		     They stack, so the lower one is not read on its own: over the top
-		     wash's 56%, E6 came to 96% and the row area was a black band with
-		     a hard edge at 616. 70 lands the pair around 75% - dark enough for
-		     the white row titles, light enough to see the artwork behind. -->
+		<!-- One wash over the whole picture. A second scrim behind the rows
+		     read as a black bar however it was graded or faded, because it had
+		     to start somewhere and the eye finds that line. -->
 		<control type="image">
 			<left>0</left><top>0</top><width>1920</width><height>1080</height>
 			<texture>colors/black.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
-		</control>
-		<control type="image">
-			<left>0</left><top>616</top><width>1920</width><height>160</height>
-			<texture>marty/fade-up.png</texture>
-			<colordiffuse>70FFFFFF</colordiffuse>
-		</control>
-		<control type="image">
-			<left>0</left><top>776</top><width>1920</width><height>304</height>
-			<texture>colors/black.png</texture>
-			<colordiffuse>70FFFFFF</colordiffuse>
 		</control>
 
 		<control type="label">
@@ -834,15 +819,6 @@
 					<content>plugin://plugin.program.martygames/?action=recent</content>
 				</control>
 			</control>
-		</control>
-		<!-- Rows scrolling out of frame leave their captions stranded above
-		     the next heading, which reads as debris rather than as content.
-		     Drawn after the list so it covers what the list leaves behind. -->
-		<control type="image">
-			<left>0</left><top>616</top><width>1920</width><height>64</height>
-			<!-- Full black here put a hard line back on top of the scrim's
-			     fade. It only has to hide captions, not paint a bar. -->
-			<texture colordiffuse="A0FFFFFF">marty/fade-top.png</texture>
 		</control>
 	</controls>
 </window>
