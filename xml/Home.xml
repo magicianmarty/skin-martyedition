@@ -800,7 +800,7 @@
 					<orientation>horizontal</orientation>
 					<onup>9107</onup>
 					<ondown>9108</ondown>
-					<onclick>$INFO[ListItem.Property(marty_click)]</onclick>
+					<onclick>ActivateWindow(Games,"$INFO[ListItem.Property(marty_info)]",return)</onclick>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
 					<itemlayout width="244" height="338">
