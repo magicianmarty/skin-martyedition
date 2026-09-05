@@ -405,9 +405,12 @@
 				<visible>Control.HasFocus(9108)</visible>
 			</control>
 			<control type="textbox">
-				<left>60</left><top>392</top><width>900</width><height>108</height>
+				<left>60</left><top>392</top><width>900</width><height>160</height>
 				<font>font13</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9108).ListItem.Property(plot_line)]</label>
+				<!-- Game synopses run long and a textbox just clips: without
+				     this you read the same truncated sentence forever. -->
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9108)</visible>
 			</control>
 		</control>
