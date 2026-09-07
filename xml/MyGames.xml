@@ -145,7 +145,7 @@
 					<align>right</align>
 					<itemgap>6</itemgap>
 					<height>36</height>
-					<width>1400</width>
+					<width>1600</width>
 					<control type="button" id="9301">
 						<width>auto</width>
 						<height>36</height>
@@ -272,6 +272,54 @@
 						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
 						<ondown>500</ondown>
 						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=doom)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
+					</control>
+					<control type="button" id="9309">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>N64</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=n64)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
+					</control>
+					<control type="button" id="9310">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>PSP</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=psp)</onclick>
+						<onclick>Container.SetViewMode(500)</onclick>
+					</control>
+					<control type="button" id="9311">
+						<width>auto</width>
+						<height>36</height>
+						<font>font10</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>18</textoffsetx>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>Dreamcast</label>
+						<texturefocus border="18" colordiffuse="button_focus">marty/pill.png</texturefocus>
+						<texturenofocus border="18" colordiffuse="30FFFFFF">marty/pill.png</texturenofocus>
+						<ondown>500</ondown>
+						<onclick>Container.Update(plugin://plugin.program.martygames/?action=system&amp;key=dreamcast)</onclick>
 						<onclick>Container.SetViewMode(500)</onclick>
 					</control>
 				</control>
