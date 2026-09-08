@@ -377,6 +377,30 @@
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration]</label>
 			</control>
+			<!-- Platform badge. The add-on sets marty_system on every game, and
+			     the icon is the emulator core's own artwork - the N64 badge is
+			     the three-pronged controller, not the word "N64". A system with
+			     no file under marty/platform/ draws the chip and nothing in it,
+			     so a new system can be listed before its icon exists. -->
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.Property(marty_system))</visible>
+				<control type="image">
+					<left>$PARAM[strip_left]</left>
+					<top>$PARAM[bottom_y]</top>
+					<width>38</width>
+					<height>26</height>
+					<texture border="6">colors/black.png</texture>
+					<colordiffuse>BBFFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<left>$PARAM[strip_left]</left>
+					<top>$PARAM[bottom_y]</top>
+					<width>38</width>
+					<height>26</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture>marty/platform/$INFO[ListItem.Property(marty_system)].png</texture>
+				</control>
+			</control>
 		</definition>
 	</include>
 	<include name="MediaFlags">
