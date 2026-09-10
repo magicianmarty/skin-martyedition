@@ -129,6 +129,13 @@
 			<texture background="true">$INFO[Container(9117).ListItem.Art(fanart)]</texture>
 			<visible>Control.HasFocus(9117)</visible>
 		</control>
+		<control type="image">
+			<left>0</left><top>0</top><width>1920</width><height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<texture background="true">$INFO[Container(9118).ListItem.Art(fanart)]</texture>
+			<visible>Control.HasFocus(9118)</visible>
+		</control>
 		<!-- One wash over the whole picture. A second scrim behind the rows
 		     read as a black bar however it was graded or faded, because it had
 		     to start somewhere and the eye finds that line. -->
@@ -512,6 +519,12 @@
 				<visible>Control.HasFocus(9117)</visible>
 			</control>
 			<control type="label">
+				<left>60</left><top>236</top><width>1160</width><height>70</height>
+				<font>font45_title</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9118).ListItem.Label]</label>
+				<visible>Control.HasFocus(9118)</visible>
+			</control>
+			<control type="label">
 				<left>60</left><top>318</top><width>1160</width><height>30</height>
 				<font>font12</font><textcolor>white</textcolor>
 				<label>$INFO[Container(9108).ListItem.Property(facts_line)]</label>
@@ -572,6 +585,12 @@
 				<visible>Control.HasFocus(9117)</visible>
 			</control>
 			<control type="label">
+				<left>60</left><top>318</top><width>1160</width><height>30</height>
+				<font>font12</font><textcolor>white</textcolor>
+				<label>$INFO[Container(9118).ListItem.Property(facts_line)]</label>
+				<visible>Control.HasFocus(9118)</visible>
+			</control>
+			<control type="label">
 				<left>60</left><top>352</top><width>1160</width><height>28</height>
 				<font>font10</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9108).ListItem.Property(people_line)]</label>
@@ -630,6 +649,12 @@
 				<font>font10</font><textcolor>grey</textcolor>
 				<label>$INFO[Container(9117).ListItem.Property(people_line)]</label>
 				<visible>Control.HasFocus(9117)</visible>
+			</control>
+			<control type="label">
+				<left>60</left><top>352</top><width>1160</width><height>28</height>
+				<font>font10</font><textcolor>grey</textcolor>
+				<label>$INFO[Container(9118).ListItem.Property(people_line)]</label>
+				<visible>Control.HasFocus(9118)</visible>
 			</control>
 			<control type="textbox">
 				<left>60</left><top>392</top><width>900</width><height>160</height>
@@ -720,6 +745,15 @@
 				     this you read the same truncated sentence forever. -->
 				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
 				<visible>Control.HasFocus(9117)</visible>
+			</control>
+			<control type="textbox">
+				<left>60</left><top>392</top><width>900</width><height>160</height>
+				<font>font13</font><textcolor>grey</textcolor>
+				<label>$INFO[Container(9118).ListItem.Property(plot_line)]</label>
+				<!-- Game synopses run long and a textbox just clips: without
+				     this you read the same truncated sentence forever. -->
+				<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
+				<visible>Control.HasFocus(9118)</visible>
 			</control>
 		</control>
 
@@ -1546,7 +1580,7 @@
 					<height>338</height>
 					<orientation>horizontal</orientation>
 					<onup>9116</onup>
-					<ondown>9117</ondown>
+					<ondown>9118</ondown>
 					<onclick>ActivateWindow(Games,"$INFO[ListItem.Property(marty_info)]",return)</onclick>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">400</scrolltime>
@@ -1566,6 +1600,55 @@
 						</control>
 					</focusedlayout>
 					<content>plugin://plugin.program.martygames/?action=shelf&amp;decade=1980</content>
+				</control>
+			</control>
+			<control type="group">
+				<height>400</height>
+				<control type="label">
+					<left>60</left>
+					<width>1200</width>
+					<height>48</height>
+					<font>font36_title</font>
+					<textcolor>white</textcolor>
+					<label>PC</label>
+					<visible>Control.HasFocus(9118)</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>1200</width>
+					<height>48</height>
+					<font>font36_title</font>
+					<textcolor>grey</textcolor>
+					<label>PC</label>
+					<visible>!Control.HasFocus(9118)</visible>
+				</control>
+				<control type="list" id="9118">
+					<left>60</left>
+					<top>56</top>
+					<width>1800</width>
+					<height>338</height>
+					<orientation>horizontal</orientation>
+					<onup>9117</onup>
+					<ondown>9118</ondown>
+					<onclick>ActivateWindow(Games,"$INFO[ListItem.Property(marty_info)]",return)</onclick>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="cubic" easing="out">400</scrolltime>
+					<itemlayout width="244" height="338">
+						<include content="MartyPosterTile">
+							<param name="focused" value="false" />
+						</include>
+					</itemlayout>
+					<focusedlayout width="244" height="338">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="110,165">Focus</animation>
+							<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="110,165">UnFocus</animation>
+							<include content="MartyPosterTile">
+								<param name="focused" value="true" />
+							</include>
+						</control>
+					</focusedlayout>
+					<content>plugin://plugin.program.martygames/?action=pc</content>
 				</control>
 			</control>
 		</control>
